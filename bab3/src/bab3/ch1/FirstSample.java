@@ -1,7 +1,6 @@
 
 package bab3.ch1;
 
-
 public class FirstSample {
     
     public static void main(String[] args){
