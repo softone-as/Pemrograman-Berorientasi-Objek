@@ -27,7 +27,7 @@ public class BitwiseOperator {
         result5 = (b ^ c); //00010100 = 20
         
         //NOT
-        result6 = (~b); // 00011000
+        result6 = (~b); // 00011000 = ~25
         
         System.out.println("a << 3 = " + result1);
         System.out.println("b >> 2 = " + result2);
