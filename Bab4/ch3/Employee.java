@@ -30,6 +30,7 @@ public class Employee {
          return hireDay;
      }
      
+     //this method can call private data salary from this class
      public void raiseSalary(double byPercent){
          double raise =  salary * byPercent/100;
          salary += raise;
