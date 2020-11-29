@@ -5,6 +5,8 @@ import java.time.*;
 
 public class Employee {
      // instance fields
+     private static int nextId = 1; // static fields
+     private int id = getNextId();
      private String name;
      private double salary;
      private LocalDate hireDay;
@@ -27,8 +29,17 @@ public class Employee {
          return salary;
      }
      
+     public static int getNextId(){
+          return nextId;
+     }
+     
      public LocalDate getHireDay(){
          return hireDay;
+     }
+     
+     private void setId(){
+          id = nextId;
+          nextId++;
      }
      
      //this method can call private data salary from this class
@@ -37,4 +48,14 @@ public class Employee {
          salary += raise;
      }
     
+     public String toString(){
+          String data;
+        data = "Id: " + this.id + "\n";
+        data += "Name: " + this.name + "\n";
+        data += "Salary: " + this.salary + "\n";
+        data += "Hire-day: " + this.hireDay + "\n";
+        data += "Company: " + this.company + "\n";
+
+        return data;
+    }
 }
