@@ -8,6 +8,7 @@ public class Employee {
      private String name;
      private double salary;
      private LocalDate hireDay;
+     private final String company = "Syihab Company";  //Final Instance field
      
     // constructor 
      public Employee(String n, double s, int year, int month, int day)
