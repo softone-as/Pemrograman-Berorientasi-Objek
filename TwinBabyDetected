@@ -1,0 +1,33 @@
+class InvalidTwinException extends Exception
+{
+	public InvalidTwinException(String s)
+	{
+		//Call constructor of parent Exception
+		super(s);
+	}
+}
+
+public class UserDefineException 
+{
+    void babyCheck(String gen) throws InvalidTwinException
+    {
+        //method to compare that the baby is twin or not
+        if(!"twin".equals(gen)){
+            throw new InvalidTwinException("The baby is not twin");
+        }
+    }
+    
+    public static void main(String args[])
+    {
+        UserDefineException obj = new UserDefineException();
+        try {
+            obj.babyCheck("not twin");
+        } 
+        catch (InvalidTwinException ex) 
+        {
+            System.out.println("Caugh the exception!");
+            System.out.println(ex.getMessage());
+        }
+    }
+
+}
